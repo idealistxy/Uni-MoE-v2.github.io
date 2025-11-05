@@ -292,12 +292,25 @@
         <div class="column is-four-fifths">
           <h2 class="title is-2">Abstract</h2>
           <div class="content has-text-justified">
-            <p>
-              The field of AI is rapidly advancing towards omnimodal systems (e.g., Qwen-Omni, GPT-4o) capable of processing diverse data types like text, images, and audio within a single, unified model. These models promise richer understanding and more natural interaction with the complex, multi-sensory world.
-              However, a central challenge lies in the inherent tension between two core competencies: deep context <strong>understanding</strong> and high-fidelity content <strong>generation</strong>. Many existing systems are architected with a bias, excelling at one but not the other. Underlying this issue is the inefficient scaling of dense transformers, which proves computationally prohibitive and leads to <strong>two critical shortcomings</strong>: a lack of robust and efficient compositional reasoning architecture across multiple modalities, and significant instability when training on heterogeneous data at scale.
-              <em>This work is anchored in a language-centric perspective to develop an efficient omnimodal large model capable of unified multimodal understanding, reasoning, and generation.</em> Our approach is predicated on the view that language, serving as a structured representation of the world and a mediator between modalities, provides the cornerstone for effective integration. This architectural choice is motivated by the established training stability and straightforward scalability of LLM-based multimodal models.
-              The code is available at <a href="https://github.com/HITsz-TMG/UMOE-Scaling-Unified-Multimodal-LLMs">https://github.com/HITsz-TMG/UMOE-Scaling-Unified-Multimodal-LLMs</a>.
-            </p>
+          <p>
+            We present Uni-MoE 2.0 from the Lychee family. As a fully open-source omnimodal model, it substantially advances the capabilities of Lychee's Uni-MoE series in language-centric multimodal understanding, reasoning, and generating. Based on the Qwen2.5-7B dense architecture, we train Uni-MoE 2.0 from scratch through three core contributions: dynamic-capacity Mixture-of-Experts (MoE) design, a progressive training strategy enhanced with an iterative reinforcement strategy, and a carefully curated multimodal data matching technique. It is capable of cross- and tri-modality understanding, as well as generating images, text, and speech.
+          </p>
+          <p>
+            <i>Architecturally</i>, our new MoE framework balances computational efficiency and capability for 10 cross-modal inputs using shared, routed, and null experts, while our Omni-Modality 3D RoPE ensures spatio-temporal cross-modality alignment in the self-attention layer.
+          </p>
+          <p>
+            <i>For training</i>, following cross-modal pretraining, we use a progressive SFT strategy that activates modality-specific experts and is enhanced by balanced data composition and an iterative GSPO-DPO method to stabilize RL training and improve reasoning.
+          </p>
+          <p>
+            <i>Data-wise</i>, the base model, trained on approximately 50B tokens of open-source multimodal data, is equipped with special speech and image generation tokens, allowing it to learn these generative tasks by conditioning its outputs on linguistic cues.
+          </p>
+          <p>
+            Extensive evaluation across approximately 90 benchmarks demonstrates that while Uni-MoE 2.0 lags behind certain powerful language models-based omnimodal models trained with larger datasets in specific metrics, it surpasses the Qwen2.5-Omni (trained with 1.2T tokens) model--which shares the same language backbone--in more than 40 key aspects. In comparison to state-of-the-art omnimodal models such as Qwen2.5-Omni, Ming-Lite-Omni, Baichuan-Omni, MiniCPM-o 2.6, and other task-specific models, our model achieves superior results in video understanding and reasoning, omnimodality comprehension, long speech understanding and generation, and AudioVisual tasks.
+            Furthermore, our model exhibits competitive performance in most image generation and editing tasks, outperforming generative models, e.g., OmniGen and Ming-Lite-Omni, in image editing tasks, Pixel-Wizard and Qwen-Image in low-level image processing tasks.
+          </p>
+          <p>
+            We open-source all training and inference codes (GitHub), five model checkpoints (Hugging Face), and data lists (Appendix) to support reproducibility and further research.
+          </p>
           </div>
         </div>
       </div>
@@ -1032,3 +1045,4 @@
   </script>
 
 </body>
+
