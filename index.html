@@ -331,25 +331,20 @@
                     <br>
                     <p>
                     <ul>
-                        <li>
-                            <b>Cross-Modality Alignment.</b> In the initial stage, we aim to establish connectivity between different modalities and linguistics. We achieve this by constructing connectors that translate various modal data into soft tokens within the
-                            language space. The primary objective here is minimizing generative entropy loss. As illustrated in the upper section of
-                            Figure 1, the LLM is optimized to generate descriptions for inputs across modalities and only the connectors are subject to training. This approach ensures seamless integration of all
-                            modalities within a unified language framework, facilitating mutual comprehension by the LLM.
-                        </li>
-                        <li>
-                            <b>Training Single-Modality Expert.</b>
-                            This stage concentrates on developing single-modality experts through dedicated training on specific cross-modal data. The goal
-                            is to refine each expert's proficiency within its respective domain, thereby enhancing the overall performance of the MoE system on diverse multimodal data. While maintaining generative entropy loss as the focal training metric, we tailor the FFN to align more closely with the characteristics of the targeted modality.
-                        </li>
-                        <li>
-                            <b> Tuning Uni-MoE.</b>
-                            The concluding stage involves integrating the expertly tuned weights from Stage 2 into the MoE layers. 
-                            We then proceed to jointly fine-tune the MLLMs utilizing mixed multimodal instructional data. The progression of the training process, as reflected by the loss
-                            curves, is depicted in Figure 3 (paper). 
-                            Comparative analysis between MoE configurations reveals that experts refined during Stage 2 achieve quicker convergence and display enhanced stability on mixed-modality datasets. 
-                            Furthermore, in scenarios involving complex mixed multimodal data, encompassing video, audio, images, and text, our model employing four modality-specific experts demonstrates reduced loss variability and more consistent training performance than its two-expert counterpart.
-                        </li>
+                        <li><em><b>Unified Modality Encoding & Generation:</b></em> We design a unified speech encoder that maps diverse audio inputs, including environmental sound, speech, and music, into a shared representation space. For output, a context-aware MoE-based TTS module supports dynamic speech synthesis (especially for long speech) and interaction. On the visual side, we employ pre-trained visual encoders to process images and videos, and build task-aware diffusion transformers for instruction-guided image generation and editing.</li>
+                        <li><em><b>Deep Cross-Modal Alignment:</b></em> To enable deep and efficient fusion of any modality, we introduce an Omni-Modality 3D RoPE mechanism in the self-attention layers. It encodes the temporal-spatial dimensions of speech, image, text, and video tokens, ensuring seamless alignment and interaction across all input types.</li>
+                        <li><em><b>MoE-Driven Cross-Modal Fusion:</b></em> We strategically extend the standard MLP layers to MoE layers. This new MoE architecture incorporates three expert types: empty experts for inference-time computation skipping, modality-specific routed experts for storing modality knowledge and processing cross-modal information, and small-size shared experts to facilitate universal information exchange. This design enables efficient computation, specialized modality handling, and effective and stable multimodal fusion.</li>
+                    </ul>
+
+                    <h3 class="title is-3" style="margin-top: 2em;">Training Recipe</h3>
+                    <p>
+                        To gain a powerful and comprehensive omnimodal large model, <strong>the training recipe with the data matching approach includes</strong> (Sec. 4) :
+                    </p>
+                    <ul>
+                        <li><em><b>Language-Centric Cross-Modal Pretraining:</b></em> We pretrain the LLM on a corpus of paired modality-to-language data (e.g., image-text, audio-text, video-text). This phase teaches the model to encode and interpret diverse modal inputs by projecting them into a shared semantic space aligned with language.</li>
+                        <li><em><b>Progressive SFT with Modality Experts:</b></em> We employ a progressive SFT strategy using modality-specific experts (grouped into audio, vision, and text categories). To enable conditional generation, we introduce special tokens that condition output generation on linguistic cues. This allows the model to learn complex tasks like text-conditioned speech synthesis and image generation directly within the SFT stage.</li>
+                        <li><em><b>Data-Balanced Annealing:</b></em> After large-scale SFT, we introduce an annealing phase where we carefully balance the data mixture across all modalities and tasks. This phase uses a reduced learning rate to gently refine the model's performance, ensuring no single modality or task dominates the final model behavior, leading to consistently superior results on omnimodal benchmarks.</li>
+                        <li><em><b>Iterative Reinforcement Learning with Self-Play Preference Optimization:</b></em> To activate long-form reasoning while ensuring training stability for our MoE model, we introduce an iterative GSPO-DPO method. This approach mainly uses the LLM itself as a judge to evaluate its own rollouts, automatically constructing high-quality preference pairs for online learning without causing training collapse.</li>
                     </ul>
                     </p>
                     <br>
