@@ -338,12 +338,40 @@
                     <img class="columns is-centered has-text-centered" src="./static/images/model.png" alt="Teaser" width="95%"
                          style="margin:0 auto">
                     <br>
-                    <figcaption>
+                    <!-- <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
                                 <b>Figure 1:Architecture of Uni-MoE 2.0</b> The Uni-MoE 2.0 architecture processes multimodal data through a unified tokenization strategy. Audio is tokenized in 30-second clips, augmented with generation tokens for voice control in the context-aware MoE-TTS module, while images are encoded using a sliding window technique. Image Generation Tokens bridge the model to a task-aware diffusion transformer for end-to-end generation tasks. The model's comprehension is powered by Omni-Modality 3D RoPE, which aligns inputs across time, and a sophisticated MoE layer. This MoE layer dynamically routes information using diverse experts, with stability ensured by null experts (for token skipping) and modality-specific routed experts (A, V, T indicate audio, visual, and textual expert pretrained on corresponding data). In contrast, compact shared experts (only 1/8 size of routed experts) enable efficient cross-modal knowledge transfer.
                             </font>
                         </p>
+                    </figcaption> -->
+                    <figcaption>
+                      <!-- 1. Centered Title -->
+                      <p style="text-align: center; color: #061E61; margin-bottom: 0.75rem; font-size: 1.1em;">
+                        <b>Figure 1: Architecture of Uni-MoE 2.0</b>
+                      </p>
+
+                      <!-- 2. Short Intro Paragraph -->
+                      <p style="text-align: justify; color: #061E61; margin-bottom: 1rem;">
+                        The Uni-MoE 2.0 architecture processes multimodal data through a unified tokenization strategy. Its key components include:
+                      </p>
+
+                      <!-- 3. Bulleted List for Readability -->
+                      <!-- Bulma 'content' class styles lists nicely, so we just add color and alignment -->
+                      <ul style="color: #061E61; text-align: left; margin-left: 2rem; margin-right: 1rem;">
+                        <li style="margin-bottom: 0.75rem;">
+                          <b>Unified Tokenization:</b> Audio is tokenized in 30-second clips, while images are encoded using a sliding window technique.
+                        </li>
+                        <li style="margin-bottom: 0.75rem;">
+                          <b>Generative Pathways:</b> Audio generation tokens enable voice control via a context-aware MoE-TTS module. Image Generation Tokens bridge the model to a task-aware diffusion transformer for end-to-end generation.
+                        </li>
+                        <li style="margin-bottom: 0.75rem;">
+                          <b>Core Comprehension:</b> Powered by <b>Omni-Modality 3D RoPE</b> to align inputs across time, and a sophisticated <b>MoE layer</b>.
+                        </li>
+                        <li style="margin-bottom: 0.75rem;">
+                          <b>Dynamic MoE Layer:</b> This layer dynamically routes information using diverse experts. Modality-specific routed experts (A, V, T) handle specialized data, null experts ensure stability by allowing token skipping, and compact shared experts (1/8 size) enable efficient cross-modal knowledge transfer.
+                        </li>
+                      </ul>
                     </figcaption>
                     <br>
                     <p>
