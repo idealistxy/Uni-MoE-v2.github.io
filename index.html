@@ -6,7 +6,7 @@
   <meta name="description" content=" Scaling Unified Multimodal LLMs with Mixture of Experts">
   <meta name="keywords" content="multi-modal model with moe">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Uni-MoE</title>
+  <title>Uni-MoE 2.0</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
@@ -123,7 +123,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title" style="color:black;" ><img src="./static/images/logo.png" width="110" height="110" style="margin-right: 10px;">Uni-MoE:</h1>
+            <h1 class="title is-1 publication-title" style="color:black;" ><img src="./static/images/logo.png" width="110" height="110" style="margin-right: 10px;">Uni-MoE 2.0:</h1>
             <h1 class="title is-2 publication-title" style="width:1200px">Scaling Unified Multimodal LLMs with Mixture of Experts</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -264,6 +264,26 @@
             <!--/ Demo Presentation. -->
         </div>
     </section>
+
+  <section class="section" style="background-color:#efeff081">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2 has-text-centered">🚀 From Uni-MoE to Uni-MoE 2.0</h2>
+          <div class="content has-text-justified">
+            <p>
+              This page details <strong>Uni-MoE 2.0</strong>, a significant evolution of our original <a href="#">Uni-MoE 1.0</a> model. 
+              The first version (whose original demos are preserved in the "Demonstrations" section below) successfully validated the framework of using MoE for unified multimodal models.
+            </p>
+            <p>
+              <strong>Uni-MoE 2.0</strong> builds on this foundation, rebuilt from scratch on the more powerful Qwen2.5-7B core, and introduces key architectural and training paradigms. 
+              Major improvements include a unified speech encoder, context-aware MoE-TTS, deep cross-modal alignment via 3D RoPE, and advanced MoE fusion strategies with a refined training recipe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
   <section class="section">
     <div class="container is-max-desktop">
@@ -272,17 +292,19 @@
         <div class="column is-four-fifths">
           <h2 class="title is-2">Abstract</h2>
           <div class="content has-text-justified">
-            <p>
-                The Mixture of Experts (MoE) architecture has emerged as a promising approach for scaling up Large Language Models (LLMs), facilitating more efficient training and inference. 
-                Regarding this potential, our work extends the MoE architecture to develop <b>Uni-MoE</b>, a unified Multimodal LLM designed to process a wide array of modalities, including audio, speech, images, text, and video. 
-                Specifically, our methodology enriches the transformer architecture of LLMs by incorporating multimodal experts, comprising: 
-                1). a shared self-attention mechanism for all modalities, 2). modality-specific experts derived from feed-forward networks, and 3). a sparse routing mechanism for allocating token-level expert attention. 
-                 We evaluate our instruction-tuned, MoE-based MLLM on a comprehensive set of multimodal datasets. The results underscore Uni-MoE's three principal benefits: 
-                a). superior performance compared to existing dense multimodal models with single-expert configurations across various benchmarks; 
-                b). enhanced multi-expert collaboration and generalization through the pre-training of modality-specific experts, rather than applying a generic MoE model directly to heterogeneous data; 
-                c). exceptional ability in handling complex cross-modality tasks such as the High School English Listening Test and Video Comprehension, demonstrating effective complexity management and reduced bias in handling mixed multimodal datasets. 
-                Our findings suggest the significant potential of MoE frameworks in the advancement of MLLMs and encourage further research in this domain. 
-                The code is available at <a href="https://github.com/HITsz-TMG/UMOE-Scaling-Unified-Multimodal-LLMs">https://github.com/HITsz-TMG/UMOE-Scaling-Unified-Multimodal-LLMs</a>.
+           <p>
+              The pursuit of Artificial Intelligence (AI) has long been guided by a vision of creating systems that can perceive, reason, and interact with the world with human-like breadth and fluency. 
+              Recently, the field of artificial intelligence has been rapidly advancing towards omnimodal systems, e.g., Qwen-Omni, Ming-Omni, Gemini, and GPT-4o, which aim to seamlessly integrate and process a diverse array of data types, including text, images, audio, and beyond, within a single, unified large model. 
+              These omnimodal models represent a pivotal step towards more general and versatile AI, promising models capable of richer understanding and more natural interaction with the complex, multi-sensory world. This is not only for pushing the frontiers of AI research but also for enabling a wide range of real-world applications, from advanced human-computer interfaces and content creation tools to super-intelligence AI assistants that can comprehend and reason across all modalities.
+           </p>
+           <p>
+              Initial forays, predominantly from well-resourced industrial labs, have demonstrated impressive capabilities. However, the architectural and algorithmic path to a genuinely comprehensive omnimodal large model is fraught with complexity. <u>A central challenge</u> lies in the inherent tension between two core competencies: deep context understanding and high-fidelity content generation. Many existing systems are architected with a bias, excelling either as powerful context understanding and reasoning (e.g., audio-only Qwen-Omni, Baichuan-Omni) that lack generative faculties or as generative powerhouses (e.g., OmniGen, BAGEL, Janus-Pro, Show-o) confined to a narrow set of modalities.
+              Underlying this issue is the inefficient scaling of model capacity, where simply expanding dense transformers proves computationally prohibitive and difficult to balance dozens of task types with multiple modal interactions. 
+              These challenges show <u>two critical shortcomings</u>: a lack of robust and efficient compositional reasoning architecture across multiple modalities, and significant instability when training on heterogeneous data at scale. Hence, the field still lacks a computationally efficient and unified architecture that achieves a synthesis of comprehensive understanding and versatile generation for all modalities.
+           </p>
+           <p>
+              <em>This work is anchored in a language-centric perspective to develop an efficient omnimodal large model capable of unified multimodal understanding, reasoning, and generation</em>. Our approach is predicated on the view that language, serving as a structured representation of the world and a mediator between modalities, provides the cornerstone for effective multimodal integration and transition. This architectural choice is motivated by established advantages of LLMs-based multimodal models, including great training stability and straightforward scalability to new scenarios.
+              The code is available at <a href="https://github.com/HITsz-TMG/UMOE-Scaling-Unified-Multimodal-LLMs">https://github.com/HITsz-TMG/UMOE-Scaling-Unified-Multimodal-LLMs</a>.
            </p>
           </div>
         </div>
