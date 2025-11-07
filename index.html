@@ -1173,15 +1173,12 @@
               </div>
               <!--          End  Example-8-->
 
-
               <h3 class="title is-4" style="margin-top: 3em">• Example-9: Generation with vs. without Chain-of-Thought</h3>
                 <div class="content has-text-justified" style="width: 70pm">
 
                   <div class="content has-text-justified" style="width: 70pm;margin-top: 1.5em">
-
                       <div class="wrapper svelte-nab2ao"
                           style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
-
                           <div class="message-wrap svelte-1uvwjgr" style="width: 100%;">
 
                               <div class="message-row user-row svelte-1uvwjgr" style="width: 100%;">
@@ -1205,15 +1202,23 @@
                                   <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
                                       style="border-style: solid;">
                                       <span class="md svelte-9tftx4 chatbot">
-                                          <!-- <p><strong>Generated Image (Without Chain-of-Thought):</strong></p> -->
+                                          <p><strong>Generated Image (Without Chain-of-Thought):</strong></p>
                                           <p>
-                                          <img style="display: inline-block;width: 250px;max-height: 400px;float: left;margin-top:0.7em"
-                                            src="./static/images/thinking-bf.png">
+                                          <img style="display: block; width: 250px; max-height: 400px; margin-top: 0.7em; border-radius: 8px;"
+                                              src="./static/images/thinking-bf.png" alt="Apple orchard generated without thinking">
                                           </p>
                                       </span>
                                   </div>
                               </div>
+                          </div>
+                      </div>
+                  </div>
 
+                  <div class="content has-text-justified" style="width: 70pm;margin-top: 1.5em">
+                      <div class="wrapper svelte-nab2ao"
+                          style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+                          <div class="message-wrap svelte-1uvwjgr" style="width: 100%;">
+                              
                               <div class="message-row user-row svelte-1uvwjgr" style="width: 100%;">
                                   <div class="avatar-container svelte-1uvwjgr">
                                       <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png"
@@ -1222,12 +1227,12 @@
                                   <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
                                       style="border-style: solid;">
                                       <span class="md svelte-9tftx4 chatbot" style="text-align: left;">
-                                          <p><strong>Prompt: </strong><br>You should first think step by step about how to construct the image, including background, objects, colors, lighting, and style. \nThe reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively. Image generation: An apple orchard during the winter.</p>
+                                          <p><strong>Prompt: </strong><br>You should first think step by step about how to construct the image, including background, objects, colors, lighting, and style. <br>The reasoning process and answer are enclosed within &lt;think&gt; &lt;/think&gt; and &lt;answer&gt; &lt;/answer&gt; tags, respectively. Image generation: An apple orchard during the winter.</p>
                                       </span>
                                   </div>
                               </div>
                               
-                              <div class="message-row bot-row svelte-1uvwjgr" style="margin-top: 1.5em;">
+                              <div class="message-row bot-row svelte-1uvwjgr">
                                   <div class="avatar-container svelte-1uvwjgr">
                                       <img class="avatar-image svelte-1uvwjgr" src="./static/images/model_logo.png"
                                           alt="avatar-bot">
@@ -1235,11 +1240,11 @@
                                   <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
                                       style="border-style: solid;">
                                       <span class="md svelte-9tftx4 chatbot">
-                                          <!-- <p><strong>self-thinking-guided generation:</strong></p> -->
+                                          <p><strong>Generated Image (With Chain-of-Thought):</strong></p>
                                           <pre style="background-color: #f0f0f0; border: 1px solid #ddd; padding: 10px; border-radius: 5px; white-space: pre-wrap; font-size: 0.9em; margin-top: 0.7em;">&lt;think&gt;<br>1. Set the scene to depict an apple orchard during the winter season. <br>2. Populate the orchard with multiple apple trees, ensuring the trees have visible branches but no leaves, indicating winter dormancy. <br>3. Include a variety of apple trees with different shapes and sizes, but all without foliage. <br>4. Position the trees so they fill the frame, showing a dense orchard environment. <br>5. Use a muted, natural color palette dominated by browns and grays to reflect the winter atmosphere. <br>6. Add subtle snow or frost on the tree branches to emphasize the winter setting. <br>7. Ensure the ground beneath the trees is covered with a light dusting of snow or frost, consistent with winter conditions. <br>8. Avoid including any leaves, fruits, or other vegetation on the trees to maintain the winter appearance. <br>9. Keep the overall lighting soft and diffused, typical of an overcast winter day. <br>10. Avoid adding any additional elements such as people, animals, or buildings to maintain focus on the orchard itself.<br>&lt;/think&gt;</pre>
                                           <p>
-                                          <img style="display: inline-block;width: 250px;max-height: 400px;float: left;margin-top:0.7em"
-                                            src="./static/images/thinking-af.png">
+                                          <img style="display: block; width: 250px; max-height: 400px; margin-top: 0.7em; border-radius: 8px;"
+                                              src="./static/images/thinking-af.png" alt="Apple orchard generated with thinking">
                                           </p>
                                       </span>
                                   </div>
@@ -1248,7 +1253,7 @@
                           </div>
                       </div>
                   </div>
-              </div>
+                </div>
 
               <br />
           </div>
