@@ -352,13 +352,13 @@
                       </p>
 
                       <!-- 2. Short Intro Paragraph -->
-                      <p style="text-align: justify; color: #061E61; margin-bottom: 1rem;">
+                      <!-- <p style="text-align: justify; color: #061E61; margin-bottom: 1rem;">
                         The Uni-MoE 2.0 architecture processes multimodal data through a unified tokenization strategy. Its key components include:
-                      </p>
+                      </p> -->
 
                       <!-- 3. Bulleted List for Readability -->
                       <!-- Bulma 'content' class styles lists nicely, so we just add color and alignment -->
-                      <ul style="color: #061E61; text-align: left; margin-left: 2rem; margin-right: 1rem;">
+                      <!-- <ul style="color: #061E61; text-align: left; margin-left: 2rem; margin-right: 1rem;">
                         <li style="margin-bottom: 0.75rem;">
                           <b>Unified Tokenization:</b> Audio is tokenized in 30-second clips, while images are encoded using a sliding window technique.
                         </li>
@@ -371,10 +371,13 @@
                         <li style="margin-bottom: 0.75rem;">
                           <b>Dynamic MoE Layer:</b> This layer dynamically routes information using diverse experts. Modality-specific routed experts (A, V, T) handle specialized data, null experts ensure stability by allowing token skipping, and compact shared experts (1/8 size) enable efficient cross-modal knowledge transfer.
                         </li>
-                      </ul>
+                      </ul> -->
                     </figcaption>
                     <br>
                     <p>
+                    <p style="text-align: justify; color: #061E61; margin-bottom: 1rem;">
+                        The Uni-MoE 2.0 architecture processes multimodal data through a unified tokenization strategy. Its key components include:
+                      </p>
                     <ul>
                         <li><b>Unified Modality Encoding & Generation:</b> We design a unified speech encoder that maps diverse audio inputs, including environmental sound, speech, and music, into a shared representation space. For output, a context-aware MoE-based TTS module supports dynamic speech synthesis (especially for long speech) and interaction. On the visual side, we employ pre-trained visual encoders to process images and videos, and build task-aware diffusion transformers for instruction-guided image generation and editing.</li>
                         <li><b>Deep Cross-Modal Alignment:</b> To enable deep and efficient fusion of any modality, we introduce an Omni-Modality 3D RoPE mechanism in the self-attention layers. It encodes the temporal-spatial dimensions of speech, image, text, and video tokens, ensuring seamless alignment and interaction across all input types.</li>                        
