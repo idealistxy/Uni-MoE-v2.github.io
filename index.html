@@ -319,7 +319,7 @@
           <img class="columns is-centered has-text-centered" src="./static/images/abstract.png" alt="Teaser" width="95%"
             style="margin:2em auto">
           <p>
-            The comprehensive evaluation of <b>Uni-MoE 2.0</b> across 85 multimodal benchmarks reveals that Uni-MoE 2.0 further pushes the boundaries of omnimodal intelligence. In comparison to leading omnimodal models such as Qwen2.5-Omni, Ming-Lite-Omni, Baichuan-Omni, MiniCPM-o 2.6, and other task-specific models, our model mainly achieves superior results in video understanding and reasoning (averaging +4% than Ming-Lite-Omni-1.5 on 8 benchmarks), omnimodality comprehension (averaging +7% than Qwen2.5-Omni on 4 benchmarks, including OmniVideoBench and WorldSense), long speech understanding ($\downarrow$ 3.5% lower WER than Qwen2.5-Omni on LibriSpeech-clean/other-long) and generation ($\downarrow$ 1% lower WER on TinyStories-en), and AudioVisual tasks (averaging +4% than Qwen2.5-Omni on Speech-Image QA).
+            The comprehensive evaluation of <b>Uni-MoE 2.0</b> across 85 multimodal benchmarks reveals that Uni-MoE 2.0 further pushes the boundaries of omnimodal intelligence. In comparison to leading omnimodal models such as Qwen2.5-Omni, Ming-Lite-Omni, Baichuan-Omni, MiniCPM-o 2.6, and other task-specific models, our model mainly achieves superior results in video understanding and reasoning (averaging +4% than Ming-Lite-Omni-1.5 on 8 benchmarks), omnimodality comprehension (averaging +7% than Qwen2.5-Omni on 4 benchmarks, including OmniVideoBench and WorldSense), long speech understanding (&darr; 3.5% lower WER than Qwen2.5-Omni on LibriSpeech-clean/other-long) and generation (&darr; 1% lower WER on TinyStories-en), and AudioVisual tasks (averaging +4% than Qwen2.5-Omni on Speech-Image QA).
           </p>
           <p>
             Furthermore, <b>Uni-MoE 2.0</b> exhibits competitive performance in most image generation and editing tasks, outperforming strong generative models in image editing and low-level image processing tasks, e.g., +0.5% than Ming-Lite-Omni on GEdit-Bench and suppressing Qwen-Image and PixWizard on 6 metrics.
@@ -359,28 +359,7 @@
                         <b>Figure 1: Architecture of Uni-MoE 2.0</b>
                       </p>
 
-                      <!-- 2. Short Intro Paragraph -->
-                      <!-- <p style="text-align: justify; color: #061E61; margin-bottom: 1rem;"> -->
-                        <!-- The Uni-MoE 2.0 architecture processes multimodal data through a unified tokenization strategy. -->
-                        <!-- The Uni-MoE 2.0 architecture processes multimodal data through a unified tokenization strategy. Its key components include: -->
-                      <!-- </p> -->
 
-                      <!-- 3. Bulleted List for Readability -->
-                      <!-- Bulma 'content' class styles lists nicely, so we just add color and alignment -->
-                      <!-- <ul style="color: #061E61; text-align: left; margin-left: 2rem; margin-right: 1rem;">
-                        <li style="margin-bottom: 0.75rem;">
-                          <b>Unified Tokenization:</b> Audio is tokenized in 30-second clips, while images are encoded using a sliding window technique.
-                        </li>
-                        <li style="margin-bottom: 0.75rem;">
-                          <b>Generative Pathways:</b> Audio generation tokens enable voice control via a context-aware MoE-TTS module. Image Generation Tokens bridge the model to a task-aware diffusion transformer for end-to-end generation.
-                        </li>
-                        <li style="margin-bottom: 0.75rem;">
-                          <b>Core Comprehension:</b> Powered by <b>Omni-Modality 3D RoPE</b> to align inputs across time, and a sophisticated <b>MoE layer</b>.
-                        </li>
-                        <li style="margin-bottom: 0.75rem;">
-                          <b>Dynamic MoE Layer:</b> This layer dynamically routes information using diverse experts. Modality-specific routed experts (A, V, T) handle specialized data, null experts ensure stability by allowing token skipping, and compact shared experts (1/8 size) enable efficient cross-modal knowledge transfer.
-                        </li>
-                      </ul> -->
                     </figcaption>
                     <br>
 
