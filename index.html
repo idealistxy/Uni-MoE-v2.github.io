@@ -425,10 +425,13 @@
                       </li>
 
                       <li>
-                        <b>Iterative Reinforcement Learning with Self-Play Preference Optimization:</b>
-                        To activate long-form reasoning while ensuring training stability for our MoE model, we introduce an
+                        <!-- <b>Iterative Reinforcement Learning with Self-Play Preference Optimization:</b> -->
+                        <b>Iterative Policy Optimization:</b>
+                        <!-- To activate long-form reasoning while ensuring training stability for our MoE model, we introduce an
                         iterative GSPO-DPO method. This approach mainly uses the LLM itself as a judge to evaluate its own rollouts,
-                        automatically constructing high-quality preference pairs for online-learning without causing training collapse.
+                        automatically constructing high-quality preference pairs for online-learning without causing training collapse. -->
+                        To activate long-form reasoning while ensuring training stability for our MoE model, we introduce an iterative GSPO-DPO training method.
+                        This approach mainly uses the LLM as a judge to evaluate rollouts, automatically constructing high-quality preference pairs for online learning without causing training collapse.
                       </li>
                     </ul>
 
@@ -1180,7 +1183,7 @@
               <!--          End  Example-8-->
 
               <!--            Example-9-->
-              <h3 class="title is-4" style="margin-top: 3em">• Example-9: Low-level Image Processing</h3>
+              <h3 class="title is-4" style="margin-top: 3em">• Example-9: Low-Level Image Restoration</h3>
               <div class="content has-text-justified" style="width: 70pm">
 
                   <div class="content has-text-justified" style="width: 70pm;margin-top: 1.5em">
@@ -1272,7 +1275,7 @@
               <!--          End  Example-9-->
 
               <!--            Example-10-->
-              <h3 class="title is-4" style="margin-top: 3em">• Example-10: Multigen</h3>
+              <h3 class="title is-4" style="margin-top: 3em">• Example-10: Controllable Generation</h3>
               <div class="content has-text-justified" style="width: 70pm">
 
                   <div class="content has-text-justified" style="width: 70pm;margin-top: 1.5em">
