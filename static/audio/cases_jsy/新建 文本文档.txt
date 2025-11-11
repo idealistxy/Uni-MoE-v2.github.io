@@ -1,0 +1,25 @@
+# a2a
+# 如果我想去中国的最北边旅游，可以给我推荐几个比较有名的城市吗？
+# b1
+# 如果你想去中国的最北边旅游，可以考虑去漠河市。漠河市位于黑龙江省大兴安岭地区，是中国最北端的城市之一。漠河市拥有壮丽的自然风光，包括中国最北的防洪大堤、中国最北的火车站和中国最北的机场等。漠河市还是中国北方的边疆重地，有着独特的边疆文化。如果你喜欢自然风光和边疆文化，那么漠河市将是一个不错的选择。
+# l-a2a1
+# 请问黑龙江还有什么地方可以去玩吗？
+# b2
+# 当然，黑龙江还有很多值得一去的地方。比如说，哈尔滨市是中国北方的冰城，这里有着壮观的冰雪景观和独特的北方文化。哈尔滨冰雪大世界和冰雪节都是著名的旅游景点。此外，哈尔滨还有大量的历史建筑和文化遗迹，如圣景山、龙山、索菲亚教堂等。如果你喜欢自然风光，也可以去哈尔滨附近的五常、尚志等地，那里有美丽的山水和丰富的野生动植物资源。总之，黑龙江有很多值得探索的地方，你可以根据自己的兴趣和喜好来选择。
+# l-a2a2
+# 请介绍一下哈尔滨最好的大学。
+# b3
+# 哈尔滨最好的大学是哈尔滨工业大学。哈工大是中国著名的综合性大学，是中国最古老的大学之一。哈工大拥有先进的科研设施和高水平的师资队伍，特别是在工程、科学、管理等领域有着很强的学科优势。此外，哈工大还与众多国内外知名企业和科研机构建立了紧密的合作关系，为学生提供了丰富的实习和就业机会。如果你对工程、科学、管理等领域感兴趣，那么哈工大将是一个不错的选择。
+# l-a2a3
+# img
+# 我的好朋友拍了一张照片发给我，可以帮我看一下这张照片是在中国的哪一个城市拍的吗
+# /data/cxy/Project/cmbank/lmms/Qwen2-VL/unimoe2infer/ia2.mp3
+# /data/cxy/Project/cmbank/lmms/Qwen2-VL/unimoe2infer/img1.jpeg
+# 这张照片应该是在中国的桂林拍摄的。因为照片中出现了一个非常著名的景点——象山和象鼻山。这两个山峰在桂林的两江四湖风景区中非常有名。照片中可以看到一个人在乘船游览这个风景区。象山和象鼻山是桂林的标志性景观之一，也是游客来到桂林必去的景点之一。它们的形状非常独特，让人印象深刻。
+# /data/cxy/Project/Uni-MoE-v2-easy/examples/assets/results/a2a2.wav
+# vid
+# What dance are the people in the video doing?
+# /data/cxy/Project/cmbank/lmms/Qwen2-VL/unimoe2infer/va3.mp3
+# /data/share/datasets/MultiModalBenchmarks/Video-MME/videos/OE5S-NbNsro.mp4
+# okay,so the people in the video, um, they are doing ballet.
+# /data/cxy/Project/Uni-MoE-v2-easy/examples/assets/results/va2a3.wav
