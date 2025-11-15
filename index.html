@@ -6,7 +6,7 @@
   <meta name="description" content=" Scaling Unified Multimodal LLMs with Mixture of Experts">
   <meta name="keywords" content="multi-modal model with moe">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Uni-MoE 2.0</title>
+  <title>Uni-MoE-2.0-Omni</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
@@ -124,7 +124,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title" style="color:black;" ><img src="./static/images/model_logo.png" width="110" height="110" style="margin-right: 10px;">Uni-MoE 2.0:</h1>
+            <h1 class="title is-1 publication-title" style="color:black;" ><img src="./static/images/model_logo.png" width="110" height="110" style="margin-right: 10px;">Uni-MoE-2.0-Omni:</h1>
             <h1 class="title is-2 publication-title" style="width:1200px">Scaling Language-Centric Omnimodal Large Model with Advanced MoE, Training and Data</h1>
             <!-- <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -259,14 +259,14 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-2 has-text-centered">&#x1F680 From Uni-MoE 1.0 to Uni-MoE 2.0</h2>
+          <h2 class="title is-2 has-text-centered">&#x1F680 From Uni-MoE 1.0 to Uni-MoE-2.0-Omni</h2>
           <div class="content has-text-justified">
             <p>
-              This page details <strong>Uni-MoE 2.0</strong>, a significant evolution of our original <a href="https://uni-moe.github.io/" target="_blank" rel="noopener noreferrer">Uni-MoE 1.0</a> model. 
+              This page details <strong>Uni-MoE-2.0-Omni</strong>, a significant evolution of our original <a href="https://uni-moe.github.io/" target="_blank" rel="noopener noreferrer">Uni-MoE 1.0</a> model. 
               The previous version explored the use of Mixture of Experts (MoE) for unified multimodal language modelling, demonstrating its effectiveness across diverse modalities such as text, audio, speech, images, and video.
             </p>
             <p>
-              <strong>Uni-MoE 2.0</strong> builds on this foundation, rebuilt from scratch on the more powerful Qwen2.5-7B core, and introduces key architectural and training paradigms. 
+              <strong>Uni-MoE-2.0-Omni</strong> builds on this foundation, rebuilt from scratch on the more powerful Qwen2.5-7B core, and introduces key architectural and training paradigms. 
               Major improvements include a unified speech encoder, context-aware MoE-TTS, deep cross-modal alignment via 3D RoPE, and advanced MoE fusion strategies with a refined training recipe.
             </p>
           </div>
@@ -299,7 +299,7 @@
           <h2 class="title is-2">Abstract</h2>
           <div class="content has-text-justified">
           <p>
-            We present Uni-MoE 2.0 from the Lychee family. As a fully open-source omnimodal model, it substantially advances the capabilities of Lychee's Uni-MoE series in language-centric multimodal understanding, reasoning, and generating. Based on the Qwen2.5-7B dense architecture, we train Uni-MoE 2.0 from scratch through three core contributions: dynamic-capacity Mixture-of-Experts (MoE) design, a progressive training strategy enhanced with an iterative reinforcement strategy, and a carefully curated multimodal data matching technique. It is capable of cross- and tri-modality understanding, as well as generating images, text, and speech.
+            We present Uni-MoE-2.0-Omni from the Lychee family. As a fully open-source omnimodal model, it substantially advances the capabilities of Lychee's Uni-MoE series in language-centric multimodal understanding, reasoning, and generating. Based on the Qwen2.5-7B dense architecture, we train Uni-MoE-2.0-Omni from scratch through three core contributions: dynamic-capacity Mixture-of-Experts (MoE) design, a progressive training strategy enhanced with an iterative reinforcement strategy, and a carefully curated multimodal data matching technique. It is capable of cross- and tri-modality understanding, as well as generating images, text, and speech.
           </p>
           <p>
             <i>Architecturally</i>, our new MoE framework balances computational efficiency and capability for 10 cross-modal inputs using shared, routed, and null experts, while our Omni-Modality 3D RoPE ensures spatio-temporal cross-modality alignment in the self-attention layer.
@@ -307,19 +307,19 @@
             <i>Data-wise</i>, the base model, trained on approximately 75B tokens of open-source multimodal data, is equipped with special speech and image generation tokens, allowing it to learn these generative tasks by conditioning its outputs on linguistic cues.
           </p>
           <!-- <p>
-            Extensive evaluation across approximately 90 benchmarks demonstrates that while Uni-MoE 2.0 lags behind certain powerful language models-based omnimodal models trained with larger datasets in specific metrics, it surpasses the Qwen2.5-Omni (trained with 1.2T tokens) model--which shares the same language backbone--in more than 40 key aspects. In comparison to state-of-the-art omnimodal models such as Qwen2.5-Omni, Ming-Lite-Omni, Baichuan-Omni, MiniCPM-o 2.6, and other task-specific models, our model achieves superior results in video understanding and reasoning, omnimodality comprehension, long speech understanding and generation, and AudioVisual tasks.
+            Extensive evaluation across approximately 90 benchmarks demonstrates that while Uni-MoE-2.0-Omni lags behind certain powerful language models-based omnimodal models trained with larger datasets in specific metrics, it surpasses the Qwen2.5-Omni (trained with 1.2T tokens) model--which shares the same language backbone--in more than 40 key aspects. In comparison to state-of-the-art omnimodal models such as Qwen2.5-Omni, Ming-Lite-Omni, Baichuan-Omni, MiniCPM-o 2.6, and other task-specific models, our model achieves superior results in video understanding and reasoning, omnimodality comprehension, long speech understanding and generation, and AudioVisual tasks.
             Furthermore, our model exhibits competitive performance in most image generation and editing tasks, outperforming generative models, e.g., OmniGen and Ming-Lite-Omni, in image editing tasks, Pixel-Wizard and Qwen-Image in low-level image processing tasks.
           </p> -->
           <!-- <p>
             We open-source all training and inference codes (GitHub), five model checkpoints (Hugging Face), and data lists (Appendix) to support reproducibility and further research.
           </p> -->
-          <img class="columns is-centered has-text-centered" src="./static/images/abstract.png" alt="Teaser" width="95%"
+          <img class="columns is-centered has-text-centered" src="./static/images/abstract-3.png" alt="Teaser" width="95%"
             style="margin:2em auto">
           <p>
-            The comprehensive evaluation of <b>Uni-MoE 2.0</b> across 85 multimodal benchmarks reveals that Uni-MoE 2.0 further pushes the boundaries of omnimodal intelligence. In comparison to leading omnimodal models such as Qwen2.5-Omni, Ming-Lite-Omni, Baichuan-Omni, MiniCPM-o 2.6, and other task-specific models, our model mainly achieves superior results in video understanding and reasoning (averaging +4% than Ming-Lite-Omni-1.5 on 8 benchmarks), omnimodality comprehension (averaging +7% than Qwen2.5-Omni on 4 benchmarks, including OmniVideoBench and WorldSense), long speech understanding (&darr; 3.5% lower WER than Qwen2.5-Omni on LibriSpeech-clean/other-long) and generation (&darr; 1% lower WER on TinyStories-en), and AudioVisual tasks (averaging +4% than Qwen2.5-Omni on Speech-Image QA).
+            The comprehensive evaluation of <b>Uni-MoE-2.0-Omni</b> across 85 multimodal benchmarks reveals that Uni-MoE-2.0-Omni further pushes the boundaries of omnimodal intelligence. In comparison to leading omnimodal models such as Qwen2.5-Omni, Ming-Lite-Omni, Baichuan-Omni, MiniCPM-o 2.6, and other task-specific models, our model mainly achieves superior results in video understanding and reasoning (averaging +4% than Ming-Lite-Omni-1.5 on 8 benchmarks), omnimodality comprehension (averaging +7% than Qwen2.5-Omni on 4 benchmarks, including OmniVideoBench and WorldSense), long speech understanding (&darr; 3.5% lower WER than Qwen2.5-Omni on LibriSpeech-clean/other-long) and generation (&darr; 1% lower WER on TinyStories-en), and AudioVisual tasks (averaging +4% than Qwen2.5-Omni on Speech-Image QA).
           </p>
           <p>
-            Furthermore, <b>Uni-MoE 2.0</b> exhibits competitive performance in most image generation and editing tasks, outperforming strong generative models in image editing and low-level image processing tasks, e.g., +0.5% than Ming-Lite-Omni on GEdit-Bench and suppressing Qwen-Image and PixWizard on 6 metrics.
+            Furthermore, <b>Uni-MoE-2.0-Omni</b> exhibits competitive performance in most image generation and editing tasks, outperforming strong generative models in image editing and low-level image processing tasks, e.g., +0.5% than Ming-Lite-Omni on GEdit-Bench and suppressing Qwen-Image and PixWizard on 6 metrics.
           </p>
           </div>
         </div>
@@ -346,14 +346,14 @@
                     <!-- <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 1:Architecture of Uni-MoE 2.0</b> The Uni-MoE 2.0 architecture processes multimodal data through a unified tokenization strategy. Audio is tokenized in 30-second clips, augmented with generation tokens for voice control in the context-aware MoE-TTS module, while images are encoded using a sliding window technique. Image Generation Tokens bridge the model to a task-aware diffusion transformer for end-to-end generation tasks. The model's comprehension is powered by Omni-Modality 3D RoPE, which aligns inputs across time, and a sophisticated MoE layer. This MoE layer dynamically routes information using diverse experts, with stability ensured by null experts (for token skipping) and modality-specific routed experts (A, V, T indicate audio, visual, and textual expert pretrained on corresponding data). In contrast, compact shared experts (only 1/8 size of routed experts) enable efficient cross-modal knowledge transfer.
+                                <b>Figure 1:Architecture of Uni-MoE-2.0-Omni</b> The Uni-MoE-2.0-Omni architecture processes multimodal data through a unified tokenization strategy. Audio is tokenized in 30-second clips, augmented with generation tokens for voice control in the context-aware MoE-TTS module, while images are encoded using a sliding window technique. Image Generation Tokens bridge the model to a task-aware diffusion transformer for end-to-end generation tasks. The model's comprehension is powered by Omni-Modality 3D RoPE, which aligns inputs across time, and a sophisticated MoE layer. This MoE layer dynamically routes information using diverse experts, with stability ensured by null experts (for token skipping) and modality-specific routed experts (A, V, T indicate audio, visual, and textual expert pretrained on corresponding data). In contrast, compact shared experts (only 1/8 size of routed experts) enable efficient cross-modal knowledge transfer.
                             </font>
                         </p>
                     </figcaption> -->
                     <figcaption>
                       <!-- 1. Centered Title -->
                       <p style="text-align: center; color: #061E61; margin-bottom: 0.75rem; font-size: 1.1em;">
-                        <b>Figure 1: Architecture of Uni-MoE 2.0</b>
+                        <b>Figure 1: Architecture of Uni-MoE-2.0-Omni</b>
                       </p>
 
 
@@ -362,7 +362,7 @@
 
                     <h3>Model Architecture</h3>
                     <p>
-                      The Uni-MoE 2.0 architecture processes multimodal data through a unified tokenization strategy.
+                      The Uni-MoE-2.0-Omni architecture processes multimodal data through a unified tokenization strategy.
                       <strong>It consists of the following architecture components:</strong>
                     </p>
                     <ul>
@@ -1598,7 +1598,7 @@
       <h2 class="title">BibTeX</h2>
       <pre><code>
    @misc{li2024unimoe,
-      title={Uni-MoE 2.0: Scaling Language-Centric Omnimodal Large Model with Advanced MoE, Training and Data}, 
+      title={Uni-MoE-2.0-Omni: Scaling Language-Centric Omnimodal Large Model with Advanced MoE, Training and Data}, 
       author={Yunxin Li and Shenyuan Jiang and Baotian Hu and Longyue Wang and Wanqi Zhong and Wenhan Luo and Lin Ma and Min Zhang},
       year={2024},
       eprint={2405.11273},
